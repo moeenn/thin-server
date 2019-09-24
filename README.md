@@ -5,7 +5,7 @@ A small, lightweight and portable server written in GoLang. This server can be u
 GoLang is an incredibly powerful yet minimalistic language. The entire code for thin server comes out to only 30 SLOCs!
 
 ## Usage
-```bash
+```
 Usage of thin-server:
   -folder string
     	Folder to serve on the server (default is current directory)
