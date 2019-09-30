@@ -1,10 +1,10 @@
 package main
 
 import (
-	"runtime"
 	"flag"
 	"log"
 	"net/http"
+	"runtime"
 	"strconv"
 )
 
@@ -15,16 +15,16 @@ func init() {
 
 func main() {
 	// set command-line flags and their default values
-	port := flag.Int( "port", 8080, "System port for running the server" )
-	folder := flag.String( "folder", ".", "Folder to serve on the server" )
+	port := flag.Int("port", 8080, "System port for running the server")
+	folder := flag.String("folder", ".", "Folder to serve on the server")
 	flag.Parse()
 
 	// set the folder to serve
-	fileServer := http.FileServer(http.Dir( *folder ))
-	http.Handle("/", fileServer )
+	fileServer := http.FileServer(http.Dir(*folder))
+	http.Handle("/", fileServer)
 
 	// start the server
-	log.Println("Starting server on port", *port, "..." )
+	log.Println("Starting server on port", *port, "...")
 	serverPort := ":" + strconv.Itoa(*port)
-	log.Fatal( http.ListenAndServe( serverPort, nil))
+	log.Fatal(http.ListenAndServe(serverPort, nil))
 }
