@@ -18,4 +18,5 @@ Usage of thin-server:
 ```bash
 $ go build thin-server.go
 ```
-
+## TODO
+Rewrite in Rust or C++ to better understand Request-Response cycles, Sockets and Concurrency.
